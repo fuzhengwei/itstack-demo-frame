@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itstack.demo.infrastructure.dao.IUserDao">
+
+    <select id="queryUserInfoCount" resultType="java.lang.Long">
+        select count(id)
+        from user
+        <where>
+            <if test="name != null">
+                and name = #{name}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryUserInfoList" resultType="org.itstack.demo.infrastructure.po.User">
+      SELECT id, name, age, address, entryTime, status, remark, createTime, updateTime
+      FROM user
+      <where>
+          <if test="name != null">
+              and name = #{name}
+          </if>
+          <if test="status != null">
+              and status = #{status}
+          </if>
+      </where>
+      limit #{pageStart},#{pageEnd}
+    </select>
+
+</mapper>

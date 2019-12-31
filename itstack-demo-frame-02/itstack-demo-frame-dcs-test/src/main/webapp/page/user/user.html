@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>测试页面</title>
+    <link rel="import" href="/res_layui.html"/>
+    <script src="js/user.js"></script>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="layui-elem-field layuimini-search">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <form class="layui-form layui-form-pane" action="" id="search">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="name" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <label class="layui-form-label">状态</label>
+                            <div class="layui-input-inline">
+                                <select lay-verify="required" field="number" name="status">
+                                   <option selected>全部</option>
+                                   <option value="0">在校</option>
+                                   <option value="1">毕业</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-inline">
+                            <a class="layui-btn" lay-submit="" lay-filter="data-search-btn">搜索</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+
+        <div class="layui-btn-group">
+            <button class="layui-btn data-add-btn">启动</button>
+            <button class="layui-btn layui-btn-danger data-delete-btn">关闭</button>
+        </div>
+        <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+        </script>
+    </div>
+</div>
+
+<table class="layui-table" id="userTable" lay-data="{height: 'full-200', cellMinWidth: 80, page: true, limit:15, url:'/api/user/queryUserInfoList.do'}">
+    <thead>
+    <tr>
+        <th lay-data="{type:'checkbox'}"></th>
+        <th lay-data="{field:'userId', align: 'left' }">用户ID</th>
+        <th lay-data="{field:'name', align: 'left'}">姓名</th>
+        <th lay-data="{field:'age', align: 'left'}">年龄</th>
+        <th lay-data="{field:'address', align: 'left'}">地址</th>
+        <th lay-data="{field:'entryTime', align: 'left', templet: util.formatDate }">入学时间</th>
+        <th lay-data="{field:'status', width:80, align: 'center',templet: util.statusInfo }">状态</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+</html>

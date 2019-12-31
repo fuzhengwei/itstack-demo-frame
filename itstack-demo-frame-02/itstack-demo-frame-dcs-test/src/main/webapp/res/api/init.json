@@ -1,0 +1,37 @@
+{
+  "clearInfo": {
+    "clearUrl": "res/api/clear.json"
+  },
+  "homeInfo": {
+    "title": "首页",
+    "icon": "fa fa-home",
+    "href": "res/page/welcome.html"
+  },
+  "logoInfo": {
+    "title": "bugstack虫洞栈",
+    "image": "res/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": {
+    "currency": {
+      "title": "服务管理",
+      "icon": "fa fa-address-book",
+      "child": [
+        {
+          "title": "用户中心",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "用户列表",
+              "href": "/page/user/user.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
