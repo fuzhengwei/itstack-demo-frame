@@ -37,7 +37,7 @@
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <!-- 日志 -->
         <slf4j.version>1.7.7</slf4j.version>
-        <logback.version>1.0.9</logback.version>
+        <logback.version>1.2.0</logback.version>
         <!-- 其他服务 -->
         <dubbo.version>2.6.6</dubbo.version>
         <zookeeper.version>3.4.14</zookeeper.version>
