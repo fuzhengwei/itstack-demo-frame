@@ -39,7 +39,7 @@
         <slf4j.version>1.7.7</slf4j.version>
         <logback.version>1.0.9</logback.version>
         <!-- 其他服务 -->
-        <dubbo.version>2.6.6</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <zookeeper.version>3.4.14</zookeeper.version>
         <netty.version>4.1.36.Final</netty.version>
         <redis.version>2.9.0</redis.version>
