@@ -20,7 +20,7 @@
         <jdk.version>1.8</jdk.version>
         <sourceEncoding>UTF-8</sourceEncoding>
         <!-- Spring -->
-        <spring.version>4.3.24.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <servlet-api.version>2.5</servlet-api.version>
         <spring.redis.version>1.8.4.RELEASE</spring.redis.version>
         <!-- DB：mysql、mybatis-->
