@@ -28,7 +28,7 @@
         <mybatis.version>3.3.0</mybatis.version>
         <mybatis_spring.version>1.2.3</mybatis_spring.version>
         <!-- JSON -->
-        <fastjson.version>1.2.60</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <jackson.version>2.5.4</jackson.version>
         <!-- Junit -->
         <junit.version>4.12</junit.version>
